@@ -1,0 +1,212 @@
+/*
+  Styles for <Dismory>
+  Author: Dison Du
+  E-mail: dison@dinehq.com
+  Version: 1.0 [2013-06-08]
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+html {
+  background: #26292d;
+  color: #7d858f;
+  font: 2.5em/1 "Dosis", sans-serif;
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga=1, dlig=1';
+  -moz-font-feature-settings: 'liga', 'dlig';
+  -ms-font-feature-settings: 'liga', 'dlig';
+  -o-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 4em;
+}
+
+a {
+  color: #7d858f;
+  text-decoration: none;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  -ms-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+h1 {
+  margin: 0 0 1em;
+  font-size: 60px;
+}
+
+h1 a {
+  color: rgba(255,255,255,.8);
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  right: 50%;
+
+  bottom: 2em;
+  margin: 0 -50px 0 0;
+  width: 100px;
+  height: 110px;
+  background: url('../images/avatar.png');
+  opacity: 0;
+  -webkit-transition: bottom .2s cubic-bezier(.19, 1, .22, 1);
+  -moz-transition: bottom .2s cubic-bezier(.19, 1, .22, 1);
+  -ms-transition: bottom .2s cubic-bezier(.19, 1, .22, 1);
+  transition: bottom .2s cubic-bezier(.19, 1, .22, 1);
+  pointer-events: none;
+}
+
+.avatar:hover span {
+  bottom: 1em;
+  opacity: 1;
+}
+
+.avatar img {
+  margin: 5px 0 0 5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 200px;
+}
+
+.intro {
+  margin: 0 0 1em;
+  line-height: 1.5em;
+}
+
+.intro a {
+  border-bottom: 2px solid #3c4147;
+}
+
+/* .intro:hover a {
+  color: rgba(255,255,255,.8); */
+
+.intro a:hover {
+  border-bottom: 2px solid rgba(255,255,255,.8);
+  color: #fff;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 .5em 0 0;
+  width: 40px;
+  height: 40px;
+  background-color: #50555c;
+  text-indent: -9999px;
+}
+
+.blog {
+  background-image: url('../images/blog.png');
+}
+
+.twitter {
+  background-image: url('../images/twitter.png');
+}
+
+.github {
+  background-image: url('../images/github.png');
+}
+
+.weibo {
+  background-image: url('../images/weibo.png');
+}
+
+.email {
+  background-image: url('../images/email.png');
+}
+
+.blog:hover {
+  background-color: #d2a06e;
+}
+
+.twitter:hover {
+  background-color: #74bdec;
+}
+
+.github:hover {
+  background-color: #97aecc;
+}
+
+.weibo:hover {
+  background-color: #e4625c;
+}
+
+.email:hover {
+  background-color: #b9c0c8;
+}
+
+@media print,
+ (-o-min-device-pixel-ratio: 5/4),
+ (-webkit-min-device-pixel-ratio: 1.25),
+ (min-resolution: 120dpi) {
+
+  .social a {
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+  }
+
+  .avatar span {
+    background: url('../images/avatar@2x.png');
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+  }
+
+  .blog {
+    background-image: url('../images/blog@2x.png');
+  }
+
+  .twitter {
+    background-image: url('../images/twitter@2x.png');
+  }
+
+  .github {
+    background-image: url('../images/github@2x.png');
+  }
+
+  .weibo {
+    background-image: url('../images/weibo@2x.png');
+  }
+
+  .email {
+    background-image: url('../images/email@2x.png');
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 2em 3em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 1.5em;
+  }
+  body {
+    padding: 1em;
+  }
+  h1 {
+    margin: 0 0 .5em;
+  }
+  .social a {
+    margin: 0 .25em 0 0;
+  }
+}
